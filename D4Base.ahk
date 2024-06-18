@@ -1,7 +1,6 @@
 #Requires AutoHotkey v2.0
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Global variables
 
@@ -10,6 +9,26 @@ KeyEnterPressed := 0 ; 0 - not pressed, 1 - pressed
 ;; Time delays
 TimeDelayDefault := 100
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Default key bindings to control script
+
+; Suspends the script
+F6::
+{
+    Suspend
+}
+
+; Reloads the script
+F8::
+{
+    Reload
+}
+
+; Exits/close the script
+F12::
+{
+    ExitApp 
+}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Other actions
