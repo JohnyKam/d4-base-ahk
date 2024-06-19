@@ -14,5 +14,5 @@ zip -r $REPO_NAME-$TAG.zip ./ -x "*/.git/*" "*/.github/*" "*/.github-scripts/*" 
 
 gh release create "$TAG" \
     --repo="$GITHUB_REPOSITORY" \
-    --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+    --title="${TAG} ${tag#v}" \
     --generate-notes
