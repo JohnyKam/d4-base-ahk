@@ -11,3 +11,8 @@ echo "Preparing release $TAG of $REPO_NAME"
 
 rm -rf $REPO_NAME-$TAG.zip
 zip -r $REPO_NAME-$TAG.zip ./ -x "*/.git/*" "*/.github/*" "*/.github-scripts/*" ".gitmodules"
+
+gh release create "$TAG" \
+    --repo="$GITHUB_REPOSITORY" \
+    --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+    --generate-notes
