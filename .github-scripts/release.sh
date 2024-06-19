@@ -16,3 +16,5 @@ gh release create "$TAG" \
     --repo="$GITHUB_REPOSITORY" \
     --title="${TAG} ${tag#v}" \
     --generate-notes
+
+gh release upload "$TAG" $REPO_NAME-$TAG.zip
